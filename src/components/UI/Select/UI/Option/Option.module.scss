@@ -1,0 +1,11 @@
+.option {
+    cursor: pointer;
+    padding: .85em;
+    display: block;
+    width: 100%;
+
+    &:hover {
+        background: var(--color-black);
+        color: var(--color-white);
+    }
+}

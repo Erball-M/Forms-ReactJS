@@ -1,0 +1,51 @@
+.label {
+    display: inline-flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.textField {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid var(--color-grey);
+    background: var(--color-white);
+    border-radius: .3em;
+    padding: .85em;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+
+    &::placeholder {
+        color: var(--color-grey-darken);
+    }
+}
+
+.textArea {
+    display: block;
+    width: 100%;
+    height: calc((4*1.3em) + (2*.85em));
+    border: 1px solid var(--color-grey);
+    background: var(--color-white);
+    border-radius: .3em;
+    padding: .85em;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    resize: vertical;
+
+    &::placeholder {
+        color: var(--color-grey-darken);
+    }
+}
+
+.pattern {
+    background: var(--color-grey-lighten);
+}
+
+.caption {
+    font-weight: 600;
+}
+
+.error {
+    border-color: var(--color-red) !important;
+}

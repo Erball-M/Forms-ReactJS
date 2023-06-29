@@ -1,0 +1,27 @@
+.left {
+    align-items: flex-end !important;
+}
+
+.ico {
+    padding: 1.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    display: block;
+}
+
+.btns {
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &.flexEnd {
+        justify-content: flex-end;
+    }
+}

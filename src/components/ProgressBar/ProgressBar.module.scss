@@ -1,0 +1,34 @@
+.container {
+    padding: .25em .5em 2em;
+
+    @media (max-width: 800px) {
+        padding: .25em 0 2em;
+    }
+}
+
+.bar {
+    width: 100%;
+    height: .5em;
+    display: block;
+    position: relative;
+    background-color: var(--color-grey);
+    border-radius: 1.5em;
+}
+
+.progressLine {
+    background: var(--color-purple);
+    height: 100%;
+    border-radius: inherit;
+    transition: .5s linear;
+}
+
+.checkPoints {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    // top: -.25em;
+    top: -50%;
+    left: 0;
+}

@@ -1,0 +1,14 @@
+.link {
+    display: inline-flex;
+    gap: .3em;
+    font-size: var(--fz-s);
+    font-weight: 500;
+    color: var(--color-purple);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--color-red);
+    }
+}
+
+.title {}
