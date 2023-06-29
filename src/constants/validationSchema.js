@@ -12,15 +12,15 @@ const ValidationSchemas = {
     Step1: Yup.object({
         fieldNickname: Yup.string()
             .trim()
-            .matches(/^[a-zA-Z0-9\s]+$/, 'Only letters and numbers are allowed')
+            .matches(/^[a-zA-Z0-9\s]+$/, 'Only English letters and numbers are allowed')
             .max(30, 'Maximum 30 characters allowed')
             .required('This field is required'),
         fieldName: Yup.string()
-            .matches(/^[a-zA-Z]+$/, 'Only letters are allowed')
+            .matches(/^[a-zA-Zа-яА-Я]+$/, 'Only letters are allowed')
             .max(50, 'Maximum 50 characters allowed')
             .required('This field is required'),
         fieldSurname: Yup.string()
-            .matches(/^[a-zA-Z]+$/, 'Only letters are allowed')
+            .matches(/^[a-zA-Zа-яА-Я]+$/, 'Only letters are allowed')
             .max(50, 'Maximum 50 characters allowed')
             .required('This field is required'),
         fieldSex: Yup.string()
