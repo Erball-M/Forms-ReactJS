@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom"
 import classNames from "classnames"
 import { Modal, Button } from "../components"
 import { toggleModal, reset } from '../../store/slices/formsSlice'
-import DoneIco from '../../images/done.svg'
-import CanceledIco from '../../images/canceled.svg'
+import { ReactComponent as DoneIco } from '../../images/done.svg'
+import { ReactComponent as CanceledIco } from '../../images/canceled.svg'
 import cl from './FinalModal.module.scss'
 
 const FinalModal = () => {
@@ -29,13 +29,18 @@ const FinalModal = () => {
             title={sendingSuccess ? 'Форма успешно отправлена' : 'Ошибка'}
         >
             <div className={cl.ico}>
-                <img className={cl.img} src={sendingSuccess ? DoneIco : CanceledIco} />
+                {
+                    sendingSuccess
+                        ? <DoneIco />
+                        : <CanceledIco />
+                }
             </div>
             <div className={classNames(cl.btns, !sendingSuccess && cl.flexEnd)}>
                 <Button
                     id={sendingSuccess ? 'button-to-main' : 'button-close'}
                     className={cl.btn}
-                    onClick={sendingSuccess ? sendedHandler : toggleHandler}
+                    // onClick={sendingSuccess ? sendedHandler : toggleHandler}
+                    onClick={sendedHandler}
                 >
                     {sendingSuccess ? 'На главную' : 'Закрыть'}
                 </Button>

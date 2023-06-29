@@ -5,9 +5,16 @@ export const sendData = createAsyncThunk('forms/sendData',
     async (_, { getState }) => {
         try {
             const { forms } = getState()
-            const values = JSON.stringify(forms.initialValues)
+            const { Main, Step1, Step2, Step3 } = forms.initialValues
+            const body = {
+                ...Main,
+                ...Step1,
+                ...Step2,
+                ...Step3,
+            }
 
-            const response = await axios.post('URL', values)
+            console.log(body)
+            const response = await axios.post('URL', JSON.stringify(body))
             return response
         } catch (err) {
             console.log(err.message)
@@ -109,4 +116,4 @@ export const {
     reset,
     toggleModal
 } = formsSlice.actions
-export default formsSlice.reducer
+export default formsSlice

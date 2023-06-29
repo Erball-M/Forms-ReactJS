@@ -4,8 +4,8 @@ import formsSlice from './slices/formsSlice'
 
 const store = configureStore({
     reducer: {
-        about: aboutSlice,
-        forms: formsSlice,
+        [aboutSlice.name]: aboutSlice.reducer,
+        [formsSlice.name]: formsSlice.reducer,
     }
 })
 
